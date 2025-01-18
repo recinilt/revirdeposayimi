@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Kod ve Barkod Tarayıcı</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+
+      /* Bildirim stili */
+      #notification {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #f44336; /* Kırmızı */
+        color: white;
+        border-radius: 5px;
+        z-index: 1000; /* Diğer öğelerin üzerinde görünmesini sağlar */
+        display: none; /* Başlangıçta gizli */
+      }
+
+      /* Ürün adı input stilini düzenle - minimum genişlik */
+      #productTable input[type="text"][data-field="productName"] {
+        min-width: 50px; /* Minimum genişlik */
+      }
+    </style>
+    <style>
+      #notificationContainer {
+        margin-top: 20px;
+        border: 1px solid #f44336;
+        background-color: #ffe6e6;
+        padding: 10px;
+        border-radius: 5px;
+        color: #f44336;
+      }
+      #notificationContainer h3 {
+        margin-top: 0;
+        color: #f44336;
+      }
+      .notification {
+        margin-bottom: 5px;
+      }
+
+      #reader {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+      }
+    </style>
+    <style>
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+
+        table {
+          display: block;
+          overflow-x: auto;
+          width: 100%;
+        }
+
+        th, td {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        #reader {
+          width: 100%;
+          max-width: 300px;
+          margin: 10px auto;
+        }
+
+        #notification {
+          font-size: 12px;
+          padding: 8px 16px;
+        }
+
+        input, button {
+          width: 100%;
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media (min-width: 769px) {
+        .container {
+          flex-direction: row;
+        }
+      }
+      button, input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+      input[type="text"], input[type="number"] {
+        width: 100%;
+      }
+      #reader {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      input, button {
+        width: 100%;
+      }
+    </style>
+    <script src="html5-qrcode.min.js"></script>
+  </head>
+  <body>
+    <h2>QR Kod / Barkod Tarayıcı</h2>
+    <div id="mygiris" style="display: block;">
+      <input type="email" id="email" placeholder="E-posta Adresi" /><br>
+      <input type="password" id="password" placeholder="Şifre" /><br>
+      <button id="mygirisbtn">Giriş</button>
+    </div>
+  <div id="myprogram" style="display: none;">
+    <input type="text" id="scannerInput" placeholder="QR Kod veya Barkod Okutun" />
+    <button id="toggleCameraButton">Start Camera</button>
+
+    <div id="reader" style="display: none;"></div>
+
+    <div id="notification"></div>
+
+    <h3>Ürün Listesi</h3>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Sıra</th>
+          <th>Ürün Adı</th>
+          <th>Ürün Kutu Sayısı</th>
+          <th>Ürün İçerik Sayısı</th>
+          <th>Son Kullanma Tarihi (Yıl)</th>
+          <th>Son Kullanma Tarihi (Ay)</th>
+          <th>
+            <button onclick="saveAllProducts()">Hepsini Kaydet</button>
+          </th>
+          <th>İptal</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h3>Ürün Özeti</h3>
+    <table id="summaryTable">
+      <thead>
+        <tr>
+          <th>Sıra</th>
+          <th>Ürün Adı</th>
+          <th>Toplam Ürün Kutu Sayısı</th>
+          <th>Toplam Ürün İçerik Sayısı</th>
+          <th>Detay</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+<hr>
+    <h3>Yeni Oluşturuluyor olan Raf Ürün Özeti</h3>
+    <table id="rafSummaryTable">
+      <thead>
+        <tr>
+          <th>Sıra</th>
+          <th>Ürün Adı</th>
+          <th>Toplam Ürün Kutu Sayısı</th>
+          <th>Toplam Ürün İçerik Sayısı</th>
+          <th>Detay</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <input type="text" id="rafNameInput" placeholder="Raf İsmi" />
+    <button id="rafKaydet">Rafı Kaydet</button>
+<hr>
+    <h2>KAYDEDİLEN RAFLAR</h2>
+    <div id="olusturulanRaflar"></div>
+<hr>
+    <div id="notificationContainer">
+      <h3>UYARILAR</h3>
+    </div>
+    <hr>
+    <input type="text" id="fileNameInput" placeholder="dosyaadı.xlsx (xlsx uzantısını da yazın.)" />
+    <button onclick="downloadExcel()">Ürün Özeti Tablosunu İndir</button><br />
+    <hr>
+    <input type="text" id="rafFileNameInput" placeholder="dosyaadı.xlsx (xlsx uzantısını da yazın.)" />
+    <button id="rafTablolariniIndir">Raf Tablolarını İndir</button><br />
+    <hr>
+    <button id="araVer">Sayıma ara ver</button><br />
+    <hr>
+    <input type="file" id="devamInput" />
+    <button id="kaldiginYerdenDevamEt">Kaldığın Yerden Devam Et</button>
+  
+  <hr>
+    <button onclick="downloadLocalStorage()">LocalStorage Verilerini İndir</button><br />
+    <hr>
+    <input type="file" id="fileInput" />
+    <button onclick="uploadLocalStorage()">LocalStorage Verilerini Yükle</button>
+  </div>
+    <audio id="bip" src="bip.wav" style="display: none;"></audio>
+    <script src="xlsx.full.min.js"></script>
+    <script src="ilacgtinleri.js"></script>
+
+  </body>
+</html>
