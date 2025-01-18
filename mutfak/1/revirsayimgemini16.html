@@ -203,6 +203,9 @@
       <h3>UYARILAR</h3>
     </div>
     <hr>
+    <input type="text" id="tumNameInput" placeholder="dosyaadı.xlsx (xlsx uzantısını da yazın.)" />
+    <button id="tumTablolariIndir">Tüm Tabloları İndir</button><br />
+    <hr>
     <input type="text" id="fileNameInput" placeholder="dosyaadı.xlsx (xlsx uzantısını da yazın.)" />
     <button onclick="downloadExcel()">Ürün Özeti Tablosunu İndir</button><br />
     <hr>
@@ -224,6 +227,7 @@
     <script src="xlsx.full.min.js"></script>
     <script src="ilacgtinleri.js"></script>
     <script>
+      // by Recep YENİ recepyeni@gmail.com
       var kullanicilar={
         "recepyeni@gmail.com":"88888888",
         "reccirik@gmail.com":"88888888",
@@ -933,6 +937,70 @@ document.getElementById('araVer').addEventListener('click', function() {
         }
         scannerInput.focus();
     }
+////////////////////////////////////////
+
+document.getElementById('tumTablolariIndir').addEventListener('click', function() {
+    const fileName = document.getElementById('tumNameInput').value;
+    const myfileName = document.getElementById('tumNameInput');
+    if (!fileName) {
+      showNotification('Lütfen bir dosya adı girin!');
+      return;
+    }
+
+    const wb = XLSX.utils.book_new();
+
+    // productTable tablosunu products değişkeninden doldur
+    const productTable = document.getElementById('productTable');
+    const productTableBody = productTable.getElementsByTagName('tbody')[0];
+    productTableBody.innerHTML = ''; // Mevcut içeriği temizle
+
+    products.forEach((product, index) => {
+      const row = productTableBody.insertRow();
+      row.insertCell().textContent = index + 1;
+      row.insertCell().textContent = product.productName;
+      row.insertCell().textContent = product.boxCount;
+      row.insertCell().textContent = product.unitCount;
+      row.insertCell().textContent = `${product.expiryYear}-${product.expiryMonth.toString().padStart(2, '0')}`;
+    });
+
+    // productTable'ı ekle
+    if (productTable) {
+      const wsProduct = XLSX.utils.table_to_sheet(productTable);
+      XLSX.utils.book_append_sheet(wb, wsProduct, 'Ürün Listesi');
+    }
+
+    // summaryTable'ı ekle
+    const summaryTable = document.getElementById('summaryTable');
+    if (summaryTable) {
+      const wsSummary = XLSX.utils.table_to_sheet(summaryTable);
+      XLSX.utils.book_append_sheet(wb, wsSummary, 'Ürün Özeti');
+    }
+
+    // rafSummaryTable'ı ekle
+    const rafSummaryTable = document.getElementById('rafSummaryTable');
+    if (rafSummaryTable) {
+      const wsRafSummary = XLSX.utils.table_to_sheet(rafSummaryTable);
+      XLSX.utils.book_append_sheet(wb, wsRafSummary, 'Yeni Raf Ürün Özeti');
+    }
+
+    // olusturulanRaflar altındaki tabloları ekle
+    const rafContainers = document.querySelectorAll('#olusturulanRaflar > div');
+    rafContainers.forEach((container, index) => {
+      const rafName = container.querySelector('h3').textContent;
+      const table = container.querySelector('table');
+      if (table) {
+        const wsRaf = XLSX.utils.table_to_sheet(table);
+        XLSX.utils.book_append_sheet(wb, wsRaf, rafName || `Raf_${index + 1}`);
+      }
+    });
+
+    XLSX.writeFile(wb, `${fileName}.xlsx`);
+    myfileName.value="";
+    scannerInput.focus();
+  });
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
       function saveAllProducts() {
         const tableBody = document.getElementById('productTable').getElementsByTagName('tbody')[0];
