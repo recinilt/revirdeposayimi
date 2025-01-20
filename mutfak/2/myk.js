@@ -1,0 +1,7 @@
+const kullanicilar=[
+    "recepyeni@gmail.com",
+    "reccirik@gmail.com",
+    "erkancaglar27@gmail.com",
+    "reccirik4@gmail.com",
+    "recepyabonelikler@gmail.com"
+];
