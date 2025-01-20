@@ -441,7 +441,16 @@ function acilis() {
         } catch (error) {
           console.error('Hata:', error);
         }
-        return productNames[productCode] ? productNames[productCode].name : 'Bilinmeyen';
+        
+        if (productNames[productCode]) {
+          return productNames[productCode].name;
+        }else{
+          showNotification('Ürün adı bulunamadı!');
+          mybip.play();
+          return 'Bilinmeyen';
+        }
+        //return productNames[productCode] ? productNames[productCode].name : 'Bilinmeyen';
+
       }
 
       // localStorage'den ürün içeriğini oku
