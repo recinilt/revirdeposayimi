@@ -230,15 +230,17 @@
     <audio id="bip" src="bip.wav" style="display: none;"></audio>
     <script src="xlsx.full.min.js"></script>
     <script src="ilacgtinleri.js"></script>
+  
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <!-- <script src="myk.js"></script> -->
+  
+    
+    <script src="myk.js"></script>
     <script>
-      const kullanicilar={
-        "recepyeni@gmail.com":"88888888",
-        "reccirik@gmail.com":"88888888",
-        "admin":"admin"
-      };
-    </script>
-    <script>
-      // by Recep YENİ recepyeni@gmail.com
+      //Qr kod / barcode ile depo yönetimi uygulaması (özellikle ilaç sektörü için)
+        //Geliştirici: Recep YENİ (recepyeni@gmail.com) (ChatGpt yardımıyla)
+        //Bir lahmacun ayran ısmarlamak isterseniz, BSC BNB Smart Chain (BEP20) USDT adresim:
+        //0x9a9b5b0eccebd2834f77f764364a14bbfc837dc0
       //////////////////////////////////// ANA PROGRAM SCRİPTLERİ
       
 /*
@@ -1103,11 +1105,8 @@ document.getElementById('tumTablolariIndir').addEventListener('click', function(
       showNotification('Hoşgeldiniz. Qr kod / Barkod okuma cihazınızla veya da telefonun kamerasıyla kod okutmaya başlayabilirsiniz. Kolaylıklar dilerim.');
       mybip.play();
       scannerInput.focus();
-    </script>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <!-- <script src="myk.js"></script> -->
-    <script>
-      //Google Giriş
+    
+      //////////////////////////////////////////////Google Giriş
       var myemail="";
       function divolustur() {
         // İlk div'i oluştur
@@ -1148,8 +1147,13 @@ document.getElementById('tumTablolariIndir').addEventListener('click', function(
                 const email = data.email;
                 console.log('Token doğrulama başarılı:', email);
                 myemail=email;
-                acilis();
-                
+                if(kullanicilar.includes(email)){
+                  showNotification('Hoşgeldiniz '+email);
+                  acilis(); 
+                }else{
+                  alert("Erişiminiz yok "+email);
+                  console.log('Erişim engellendi:', email);
+                }
                 // ... (e-posta adresini kullanarak diğer işlemleri yap) ...
             } else {
                 // Token doğrulama başarısız
@@ -1183,8 +1187,7 @@ document.getElementById('tumTablolariIndir').addEventListener('click', function(
       }
   
       divolustur(); 
-    </script> 
-    <script>
+    
       ////////////////////////////////////////GITHUB SCRİPTİ
       const kullaniciAdi = "recinilt";
 const repoAdi = "revirdeposayimi";
@@ -1335,10 +1338,7 @@ scannerInput.focus();
 
 
 
-    </script>
-
     
-      <script>
         //////////////////////////////ÇIKIŞTA UYARI SCRİPTİ
         // Fonksiyon: Verileri kaydetmek için örnek işlem
         function saveBarcodeData() {
