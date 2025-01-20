@@ -1132,7 +1132,15 @@ document.getElementById('tumTablolariIndir').addEventListener('click', function(
         mygoogle.appendChild(div2);
       }
       
-      
+      function soruSorVeYukle() {
+        const kullaniciCevabi = confirm("Buluttan lokale veri yüklensin mi?");
+
+        if (kullaniciCevabi) {
+          readFile();
+        } else {
+          console.log("Veri yükleme işlemi iptal edildi.");
+        }
+      }
       function handleCredentialResponse(response) {
         // 1. ID token'ını al
         const id_token = response.credential; 
@@ -1150,6 +1158,8 @@ document.getElementById('tumTablolariIndir').addEventListener('click', function(
                 if(kullanicilar.includes(email)){
                   showNotification('Hoşgeldiniz '+email);
                   acilis(); 
+                  soruSorVeYukle();
+                  
                 }else{
                   alert("Erişiminiz yok "+email);
                   console.log('Erişim engellendi:', email);
@@ -1365,6 +1375,7 @@ scannerInput.focus();
             // Hayır seçeneği için bir şey yapmaya gerek yok, sayfa zaten kapanır.
         });
     
+        
     </script>
   </body>
 </html>
