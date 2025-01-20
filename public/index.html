@@ -1181,11 +1181,11 @@ document.getElementById('tumTablolariIndir').addEventListener('click', function(
     <script>
       //Github
       const kullaniciAdi = "recinilt";
-const repoAdi = "public/revirdeposayimi";
+const repoAdi = "revirdeposayimi";
 const token = "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"; // document.getElementById("token").value;
 
 async function writeToFile(mymydata) {
-  const filename = myemail.split("@")[0]; //document.getElementById("filename").value;
+  const filename = "public/" + myemail.split("@")[0]; //document.getElementById("filename").value;
   const message = mymydata; // document.getElementById("message").value;
 
   try {
@@ -1240,7 +1240,7 @@ async function writeToFile(mymydata) {
 
 async function readFile() {
   //const token = document.getElementById("token").value;
-  const filename = myemail.split("@")[0] // document.getElementById("filename").value;
+  const filename = "public/" + myemail.split("@")[0] // document.getElementById("filename").value;
     
   try {
     const response = await fetch(`https://api.github.com/repos/${kullaniciAdi}/${repoAdi}/contents/${filename}`, {
