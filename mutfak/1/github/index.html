@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Dosya İşlemleri</title>
+</head>
+<body>
+  <h1>GitHub Dosya İşlemleri</h1>
+
+  <label for="token">GitHub Token:</label>
+  <input type="password" id="token" name="token"><br><br>
+
+  <label for="filename">Dosya Adı:</label>
+  <input type="text" id="filename" name="filename"><br><br>
+
+  <label for="message">Mesaj:</label>
+  <textarea id="message" name="message"></textarea><br><br>
+
+  <button onclick="writeToFile()">Dosyaya Yaz</button>
+  <button onclick="readFile()">Dosyayı Oku</button>
+
+  <div id="output"></div>
+
+  <script src="script.js"></script> 
+</body>
+</html>
