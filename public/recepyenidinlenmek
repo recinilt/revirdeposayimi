@@ -1,0 +1,286 @@
+{
+    "products": [
+        {
+            "timestamp": 1737570483822,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": "2500",
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570486138,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 3000,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570493604,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 3000,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570494423,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 3000,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570495188,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 3000,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570508956,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570510549,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570511320,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570527302,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570528037,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570528586,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570529551,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570530058,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570557977,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570558589,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570559098,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570559688,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570562249,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570562996,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570563566,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        }
+    ],
+    "rafproducts": [
+        {
+            "timestamp": 1737570557977,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570558589,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570559098,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570559688,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570562249,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570562996,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        },
+        {
+            "timestamp": 1737570563566,
+            "productCode": "86937344",
+            "productName": "camel",
+            "boxCount": 1,
+            "unitCount": 1,
+            "expiryYear": 2500,
+            "expiryMonth": 12,
+            "fullCode": "86937344"
+        }
+    ],
+    "raflar": [
+        {
+            "rafName": "raf 1",
+            "tableHTML": "<table>\n      <thead>\n        <tr>\n          <th>Sıra</th>\n          <th>Ürün Adı</th>\n          <th>Toplam Ürün Kutu Sayısı</th>\n          <th>Toplam Ürün İçerik Sayısı</th>\n          <th>Detay</th>\n        </tr>\n      </thead>\n      <tbody><tr><td>1</td><td>camel</td><td>8</td><td>8</td><td>SKT-2500-12:4 kutu, SKT-3000-12:4 kutu</td></tr></tbody>\n    </table>"
+        },
+        {
+            "rafName": "raf 2",
+            "tableHTML": "<table>\n      <thead>\n        <tr>\n          <th>Sıra</th>\n          <th>Ürün Adı</th>\n          <th>Toplam Ürün Kutu Sayısı</th>\n          <th>Toplam Ürün İçerik Sayısı</th>\n          <th>Detay</th>\n        </tr>\n      </thead>\n      <tbody><tr><td>1</td><td>camel</td><td>5</td><td>5</td><td>SKT-2500-12:5 kutu</td></tr></tbody>\n    </table>"
+        }
+    ]
+}

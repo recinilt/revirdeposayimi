@@ -1,6 +1,18 @@
 {
+  "0108699504750300": {
+    "name": "DİGOXİN SANDOZ 0.5MG/5ML 5 AMP.",
+    "unitCount": 1
+  },
+  "0108680177220023": {
+    "name": "ZADITEN % 0,025 STERIL GOZ DAMLASI 5 ML",
+    "unitCount": 1
+  },
   "8680075449922": {
     "name": "ENJEKTÖR 5ML.",
+    "unitCount": 1
+  },
+  "0108699624750013": {
+    "name": "NOOTROPIL 1 GR 12 AMPUL",
     "unitCount": 1
   },
   "8682851770077": {
@@ -25,6 +37,14 @@
   },
   "8699788698237": {
     "name": "%20 DEKSTROZ 500 ML.",
+    "unitCount": 1
+  },
+  "0108699708751813": {
+    "name": "DIGOXIN - ASSOS 0,5 MG /2 ML IV ENJEKSIYONLUK COZELTI 5 AMPUL ",
+    "unitCount": 1
+  },
+  "0108699516010324": {
+    "name": "AVIL 22,7 MG TABLET",
     "unitCount": 1
   },
   "8698819860285": {
@@ -75,6 +95,10 @@
     "name": "EKG ELEKTROT",
     "unitCount": 1
   },
+  "0108699522705009": {
+    "name": "CALPOL 120 MG 150 ML SUSPANSIYON",
+    "unitCount": 1
+  },
   "8717371740269": {
     "name": "BANDAFİX ELASTİK GENİŞ MESH BANDAJ SİZE 6",
     "unitCount": 1
@@ -89,6 +113,14 @@
   },
   "8681227070674": {
     "name": "HAZNELİ OKSİJEN MASKESİ YETİŞKİN",
+    "unitCount": 1
+  },
+  "8699606693147": {
+    "name": "İZOLEN-P %5 DEKSTROZLU ÇÖZELTİ 500 ML.",
+    "unitCount": 1
+  },
+  "0108699541791007": {
+    "name": "PREDNOL-L 40 MG 1 AMPUL",
     "unitCount": 1
   },
   "5019780012030": {
@@ -247,6 +279,10 @@
     "name": "SAF SU (DEİYONİZE SU) 1000 G",
     "unitCount": 1
   },
+  "9999999999995": {
+    "name": "BUSCOPAN AMP",
+    "unitCount": 1
+  },
   "8683481000350": {
     "name": "FLASTER 10CMX5MT",
     "unitCount": 1
@@ -263,6 +299,10 @@
     "name": "İzoleks - P %5 Dekstroz 500 ml.",
     "unitCount": 1
   },
+  "0108699541791205": {
+    "name": "PREDNOL-L 250 MG 1 AMPUL",
+    "unitCount": 1
+  },
   "0108699809127630": {
     "name": "BUSCOPAN 10 MG 20 TB",
     "unitCount": 20
@@ -271,12 +311,24 @@
     "name": "POTASYUM PERMANGANAT 100 GR",
     "unitCount": 1
   },
+  "8697637691231": {
+    "name": "NEOFLEKS %5 DEKSTROZ LAKTATLI RİNGER 500 ML.",
+    "unitCount": 1
+  },
   "8682843716267": {
     "name": "JEL TERMOJEL GEL PACKS 13X13CM SICAK VE SOĞUK KOMPRES JEL",
     "unitCount": 1
   },
+  "9999999999993": {
+    "name": "PREDNOL-L 250 MG. AMP.",
+    "unitCount": 1
+  },
   "8699606691174": {
     "name": "İZOLEN DENGELİ 500 ML.",
+    "unitCount": 1
+  },
+  "9999999999992": {
+    "name": "PREDNOL-L 40 MG. AMP.",
     "unitCount": 1
   },
   "8699660650025": {
@@ -297,6 +349,10 @@
   },
   "8698726548283": {
     "name": "ENDOTRAKEAL TÜP KAFLI 8 MM.",
+    "unitCount": 1
+  },
+  "9999999999994": {
+    "name": "ADELEKS 4MG/2ML AMP",
     "unitCount": 1
   },
   "01080337379860041124010017290100103560": {
@@ -337,6 +393,14 @@
   },
   "8699606690757": {
     "name": "%5 DEKSTROZ 250 ML.",
+    "unitCount": 1
+  },
+  "9999999999991": {
+    "name": "PREDNOL-L 20 MG. AMP.",
+    "unitCount": 1
+  },
+  "9999999999990": {
+    "name": "MUSCORİL 4MG/2ML AMP",
     "unitCount": 1
   },
   "8698915350185": {
@@ -394,6 +458,10 @@
   "0108680400770424": {
     "name": "SEDEVER 5MG/5ML 5 AMP.",
     "unitCount": 3
+  },
+  "0108699514040033": {
+    "name": "ECOPIRIN 300 MG 30 ENTERIK KAPLI TABLET",
+    "unitCount": 1
   },
   "4719003940041": {
     "name": "KULAKTAN ÖLÇER DİJİTAL TERMOMETRE PROBU 40 ADET",
