@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script src="mylist.js"></script>
+    <script>
+        
+// Verileri işlemek için bir fonksiyon (düzeltildi)
+function veriIsle(data) {
+  const islenmisVeri = {};
+
+  for (const name in data) {  // for...in döngüsü kullanıldı
+    const { kutu, birim, detay, yer, sayfa } = data[name];
+    if (islenmisVeri[name]) {
+      islenmisVeri[name].kutu += kutu;
+      islenmisVeri[name].birim += birim;
+      islenmisVeri[name].detay += ", " + detay;
+      islenmisVeri[name].yer += ", " + yer;
+      islenmisVeri[name].sayfa += ", " + sayfa;
+    } else {
+      islenmisVeri[name] = { kutu, birim, detay, yer, sayfa };
+    }
+  }
+
+  // name alanına göre alfabetik sıralama (değişmedi)
+  const siraliVeri = Object.entries(islenmisVeri)
+    .sort((a, b) => a[0].localeCompare(b[0]));
+
+  return siraliVeri;
+}
+
+// Tabloyu oluşturan fonksiyon (değişmedi)
+function tabloOlustur(data) {
+    const table = document.createElement('table');
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>Sıra</th>
+        <th>İlaç Adı</th>
+        <th>Kutu Sayısı</th>
+        <th>Birim Sayısı</th>
+        <th>Detay</th>
+        <th>Yer</th>
+        <th>Sayfa</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  `;
+
+  const tbody = table.querySelector('tbody');
+
+  data.forEach((item, index) => {
+    const [name, { kutu, birim, detay, yer, sayfa }] = item;
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${name}</td>
+      <td>${kutu}</td>
+      <td>${birim}</td>
+      <td>${detay}</td>
+      <td>${yer}</td>
+      <td>${sayfa}</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  return table;
+}
+
+// Verileri işle ve tabloyu oluştur
+const islenmisVeri = veriIsle(revir3);
+const tablo = tabloOlustur(islenmisVeri);
+
+// Tabloyu HTML'e ekle
+document.body.appendChild(tablo);
+    </script>
+</body>
+</html>

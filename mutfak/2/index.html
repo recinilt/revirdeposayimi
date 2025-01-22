@@ -1371,7 +1371,7 @@ scannerInput.focus();
 var mykullanicilarim={};
 async function readFileKullanicilar() {
   //const token = document.getElementById("token").value;
-  const filename ="public/mykullanicilarim" //"public/" + myemail.split("@")[0] // document.getElementById("filename").value;
+  const filename ="mykullanicilarim" //"public/" + myemail.split("@")[0] // document.getElementById("filename").value;
     
   try {
     const response = await fetch(`https://api.github.com/repos/${kullaniciAdi}/${repoAdi}/contents/${filename}`, {
@@ -1392,6 +1392,9 @@ async function readFileKullanicilar() {
 
     // İçeriği UTF-8 olarak çöz
     let utf8Content = decodeURIComponent(escape(decodedContent));
+    console.log(utf8Content);
+    let utf8toliste=JSON.parse(utf8Content);
+    console.log(utf8toliste);
     //const decoder = new TextDecoder('utf-8');
     //let utf8Content = decoder.decode(new Uint8Array(decodedContent));
     // Anahtarları çift tırnak içine alacak şekilde düzelt
