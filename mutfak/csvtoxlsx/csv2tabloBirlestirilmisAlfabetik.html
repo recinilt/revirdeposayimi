@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSV İşleyici</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+
+<h1>CSV İşleyici</h1>
+
+<input type="file" id="fileUpload" />
+<button onclick="işle()">İşle</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function işle() {
+  var fileUpload = document.getElementById("fileUpload");
+  var file = fileUpload.files[0];
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    var csvData = e.target.result;
+    var tableHtml = csvTabloyaDönüştür(csvData);
+    document.getElementById("tableContainer").innerHTML = tableHtml;
+  };
+
+  reader.readAsText(file);
+}
+
+function csvTabloyaDönüştür(csvData) {
+  var lines = csvData.split("\n");
+  var data = {};
+
+  // CSV verilerini işle
+  for (var i = 1; i < lines.length; i++) {
+    var row = parseCSVLine(lines[i]);
+    var ürünAdı = row[1]; 
+    var kutuSayısı = parseInt(row[2]) || 0; 
+    var içerikSayısı = parseInt(row[3]) || 0;
+    var detay = row[4] || ""; 
+    var yer = row[5] || "";
+    var sheetName = row[6] || "";
+
+    if (!data[ürünAdı]) {
+      data[ürünAdı] = {
+        kutuSayısı: 0,
+        içerikSayısı: 0,
+        detay: [],
+        yer: [],
+        sheetName: []
+      };
+    }
+
+    data[ürünAdı].kutuSayısı += kutuSayısı;
+    data[ürünAdı].içerikSayısı += içerikSayısı;
+    data[ürünAdı].detay.push(detay);
+    data[ürünAdı].yer.push(yer);
+    data[ürünAdı].sheetName.push(sheetName);
+  }
+
+  // Ürün adına göre sırala (Türkçe karakterleri doğru sıralamak için localeCompare kullan)
+  var sıralıÜrünler = Object.keys(data).sort(function(a, b) {
+    return a.localeCompare(b, 'tr'); 
+  });
+
+  // HTML tablosu oluştur
+  var tableHtml = "<table>";
+  tableHtml += "<tr><th>Sıra</th><th>Ürün Adı</th><th>Toplam Ürün Kutu Sayısı</th><th>Toplam Ürün İçerik Sayısı</th><th>Detay</th><th>Yer</th><th>SheetName</th></tr>";
+  for (var i = 0; i < sıralıÜrünler.length; i++) {
+    var ürünAdı = sıralıÜrünler[i];
+    var ürün = data[ürünAdı];
+    tableHtml += "<tr>";
+    tableHtml += "<td>" + (i + 1) + "</td>";
+    tableHtml += "<td>" + ürünAdı + "</td>";
+    tableHtml += "<td>" + ürün.kutuSayısı + "</td>";
+    tableHtml += "<td>" + ürün.içerikSayısı + "</td>";
+    tableHtml += "<td>" + ürün.detay.join(", ") + "</td>";
+    tableHtml += "<td>" + ürün.yer.join(", ") + "</td>";
+    tableHtml += "<td>" + ürün.sheetName.join(", ") + "</td>";
+    tableHtml += "</tr>";
+  }
+  tableHtml += "</table>";
+
+  return tableHtml;
+}
+
+function parseCSVLine(line) {
+  var result = [];
+  var inQuotes = false;
+  var currentField = "";
+  for (var i = 0; i < line.length; i++) {
+    var char = line[i];
+    if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === ',' && !inQuotes) {
+      result.push(currentField);
+      currentField = "";
+    } else {
+      currentField += char;
+    }
+  }
+  result.push(currentField);
+  return result;
+}
+</script>
+
+</body>
+</html>

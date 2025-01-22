@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    
+    <script>
+              const kullaniciAdi = "recinilt";
+const repoAdi = "gng";
+const token = "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"; // document.getElementById("token").value;
+
+async function writeToFile(mymydata) {
+  const filename = "myobje3";//"public/" + myemail.split("@")[0]; //document.getElementById("filename").value;
+  const message = mymydata; // document.getElementById("message").value;
+
+  try {
+    // GitHub API'sini kullanarak dosyanın varlığını kontrol et
+    let sha = null; // Dosya sha değeri, mevcut dosya yoksa null kalır
+    try {
+      const response = await fetch(`https://api.github.com/repos/${kullaniciAdi}/${repoAdi}/contents/${filename}`, {
+        headers: {
+          'Authorization': `token ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        sha = data.sha; // Mevcut dosyanın SHA değerini al
+      }
+    } catch (err) {
+      // Dosya bulunamadıysa burada hata alırız, ama bu hata normal çünkü dosyayı oluşturacağız
+    }
+
+    //listeyi metne çevir:
+    // Dönüştürme işlemi
+    var gidecekMetin = JSON.stringify(message, null, 4);
+    console.log("gidecekMetin STRİNG: " ,gidecekMetin);
+    // Metni köşeli parantez içine almak
+    //gidecekMetin = `[ \n${gidecekMetin.slice(2, -2)} \n]`;
+    console.log("gidecekMetin STRİNG: " ,gidecekMetin);
+    // Yeni içeriği UTF-8 olarak kodla ve Base64 formatına çevir
+    let utf8Content = unescape(encodeURIComponent(gidecekMetin));
+    let encodedContent = btoa(utf8Content);
+
+    // Dosyayı oluştur veya güncelle
+    const updateResponse = await fetch(`https://api.github.com/repos/${kullaniciAdi}/${repoAdi}/contents/${filename}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Accept': 'application/vnd.github.v3+json'
+      },
+      body: JSON.stringify({
+        message: sha ? 'Dosya güncellendi' : 'Yeni dosya oluşturuldu',
+        content: encodedContent,
+        sha: sha // Eğer dosya mevcut değilse, sha değerini null bırakıyoruz
+      })
+    });
+
+    if (updateResponse.ok) {
+      document.getElementById("output").innerText = sha
+        ? "Dosya başarıyla güncellendi."
+        : "Yeni dosya başarıyla oluşturuldu.";
+    } else {
+      document.getElementById("output").innerText = "Dosya işlenirken bir hata oluştu.";
+    }
+  } catch (error) {
+    document.getElementById("output").innerText = "Bir hata oluştu: " + error;
+  }
+}
+
+ 
+async function readFile() {
+  //const token = document.getElementById("token").value;
+  const filename ="myobje2"; // "public/" + myemail.split("@")[0] // document.getElementById("filename").value;
+    
+  try {
+    const response = await fetch(`https://api.github.com/repos/${kullaniciAdi}/${repoAdi}/contents/${filename}`, {
+      headers: {
+        'Authorization': `token ${token}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    });
+    const data = await response.json();
+
+    // Dosya içeriğini al ve base64 kodunu çöz
+    //let content = data.content;
+    //let decodedContent = atob(content);
+    ///////
+    // Dosya içeriğini al ve base64 kodunu çöz
+    let content = data.content;
+    let decodedContent = atob(content);
+
+    // İçeriği UTF-8 olarak çöz
+    let utf8Content = decodeURIComponent(escape(decodedContent));
+    console.log("utf8Content: " ,utf8Content);
+    var mykullanicilar = JSON.parse(utf8Content);
+    console.log("mykullanicilar: " ,mykullanicilar);
+    console.log("mykullanicilar: " ,mykullanicilar.su); //yani buraya kadarını kullanırsan, listeyi alabilirsin.
+    
+    
+    //document.getElementById("output").innerText = decodedContent;
+    return mykullanicilar;
+  } catch (error) {
+    console.log( "Bir hata oluştu: " + error);
+  }
+}
+
+async function processFile() {
+    try {
+        // readFile'den dönen sonucu bekle ve değişkene ata
+        var mymylistim = await readFile();
+        
+        // Sonucu yazdır
+        console.log("mymylistim: ", mymylistim);
+        
+        // writeToFile fonksiyonuna yaz
+        writeToFile(mymylistim);
+    } catch (error) {
+        console.error("Hata oluştu:", error);
+    }
+}
+
+// Fonksiyonu çalıştır
+processFile();
+
+
+
+
+    </script>
+</body>
+</html>

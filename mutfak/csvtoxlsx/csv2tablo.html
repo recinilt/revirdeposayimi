@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSV to Table Converter</title>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<h1>CSV to Table Converter</h1>
+
+<input type="file" id="fileUpload" />
+<button onclick="convert()">Convert</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function convert() {
+  var fileUpload = document.getElementById("fileUpload");
+  var file = fileUpload.files[0];
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    var csvData = e.target.result;
+    var tableHtml = convertCSVToTable(csvData);
+    document.getElementById("tableContainer").innerHTML = tableHtml;
+  };
+
+  reader.readAsText(file);
+}
+
+function convertCSVToTable(csvData) {
+  var lines = csvData.split("\n");
+  var tableHtml = "<table>";
+
+  // Başlık satırı
+  var header = parseCSVLine(lines[0]);
+  tableHtml += "<tr>";
+  for (var j = 0; j < header.length; j++) {
+    tableHtml += "<th>" + header[j] + "</th>";
+  }
+  tableHtml += "</tr>";
+
+  // Veri satırları
+  for (var i = 1; i < lines.length; i++) {
+    var row = parseCSVLine(lines[i]);
+    tableHtml += "<tr>";
+    for (var j = 0; j < row.length; j++) {
+      tableHtml += "<td>" + row[j] + "</td>";
+    }
+    tableHtml += "</tr>";
+  }
+
+  tableHtml += "</table>";
+  return tableHtml;
+}
+
+function parseCSVLine(line) {
+  var result = [];
+  var inQuotes = false;
+  var currentField = "";
+  for (var i = 0; i < line.length; i++) {
+    var char = line[i];
+    if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === ',' && !inQuotes) {
+      result.push(currentField);
+      currentField = "";
+    } else {
+      currentField += char;
+    }
+  }
+  result.push(currentField);
+  return result;
+}
+</script>
+
+</body>
+</html>

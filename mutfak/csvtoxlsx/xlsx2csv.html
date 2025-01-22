@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>XLSX to CSV Converter</title>
+<script src="xlsx.full.min.js"></script>
+</head>
+<body>
+
+<h1>XLSX to CSV Converter</h1>
+
+<input type="file" id="fileUpload" />
+<button onclick="convert()">Convert</button>
+
+<script>
+function convert() {
+  var fileUpload = document.getElementById("fileUpload");
+  var file = fileUpload.files[0];
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    var data = e.target.result;
+    var workbook = XLSX.read(data, { type: 'binary' });
+    var csvData = [];
+
+    workbook.SheetNames.forEach(function(sheetName) {
+      var worksheet = workbook.Sheets[sheetName];
+      var sheetData = XLSX.utils.sheet_to_csv(worksheet);
+      // Sayfa adını ekle
+      sheetData = "SheetName," + sheetData; 
+      csvData.push(sheetData);
+    });
+
+    var combinedCsv = csvData.join("\n");
+    downloadCSV(combinedCsv, file.name.replace(".xlsx", ".csv"));
+  };
+
+  reader.readAsBinaryString(file);
+}
+
+function downloadCSV(csv, filename) {
+  var link = document.createElement("a");
+  link.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+  link.target = "_blank";
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+</body>
+</html>

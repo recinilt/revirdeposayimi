@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLSX'ten CSV'ye Güçlü Dönüştürücü</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1>Türkçe Uyumlu XLSX'ten CSV'ye Dönüştürücü</h1>
+    <p>Bir XLSX dosyası seçin ve 7. sayfadan itibaren tüm sayfaları Türkçe karakter desteğiyle bir CSV dosyasına dönüştürün.</p>
+    <input type="file" id="xlsxFile" accept=".xlsx, .xls" />
+    <button onclick="convertToCSV()">Dönüştür ve İndir</button>
+
+    <script>
+        function convertToCSV() {
+            const fileInput = document.getElementById('xlsxFile');
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('Lütfen bir XLSX dosyası seçin!');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+
+                let csvContent = '\uFEFF'; // UTF-8 BOM ekleniyor
+                const sheetNames = workbook.SheetNames;
+
+                // 7. sayfadan sonraki sayfaları işle
+                for (let i = 0; i < sheetNames.length; i++) {
+                    const sheetName = sheetNames[i];
+                    const worksheet = workbook.Sheets[sheetName];
+                    const csvData = XLSX.utils.sheet_to_csv(worksheet, { FS: ';' }); // Türkçe için ; ayırıcı
+                    csvContent += `Sayfa: ${sheetName}\n` + csvData + '\n';
+                }
+
+                if (!csvContent) {
+                    alert('7. sayfadan sonra dönüştürülecek bir içerik bulunamadı.');
+                    return;
+                }
+
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'turkce_donusturulmus.csv';
+                link.click();
+                URL.revokeObjectURL(url);
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+    </script>
+</body>
+</html>
