@@ -1,23 +1,7 @@
 {
-  "8699788697513": {
-    "name": "%0.9 İZOTONİK SODYUM KLORÜR 1000 ML.",
-    "unitCount": 1
-  },
-  "8699788694017": {
-    "name": "%5 DEKSTROZ 500 ML.",
-    "unitCount": 1
-  },
-  "8699164550111": {
-    "name": "ENDOTRAKEAL TÜP KAFLI 7 MM.",
-    "unitCount": 1
-  },
   "8680075449922": {
     "name": "ENJEKTÖR 5ML.",
     "unitCount": 1
-  },
-  "0108699586750137": {
-    "name": "LARGACTIL 25 MG ENJEKSIYONLUK/INFUZYONLUK COZELTI ICEREN AMPUL (10 AMPUL)",
-    "unitCount": 2
   },
   "8682851770077": {
     "name": "NAZAL OKSİJEN KANÜLÜ YETİŞKİN",
@@ -25,14 +9,6 @@
   },
   "8699164550050": {
     "name": "ENDOTRAKEAL TÜP KAFLI 4 MM.",
-    "unitCount": 1
-  },
-  "8699788991048": {
-    "name": "İNFÜZYON SETİ",
-    "unitCount": 1
-  },
-  "8698573031051": {
-    "name": "HAZNELİ OKSİJEN MASKESİ ÇOCUK",
     "unitCount": 1
   },
   "8699606691310": {
@@ -47,49 +23,61 @@
     "name": "CORDARONE BT 200 MG 30 TABLET",
     "unitCount": 30
   },
-  "0108699532017802": {
-    "name": "XANAX 0,5 MG 30 TABLET",
-    "unitCount": 20
-  },
   "8699788698237": {
     "name": "%20 DEKSTROZ 500 ML.",
     "unitCount": 1
   },
-  "8682076023613": {
-    "name": "OKSİJEN MASKESİ YETİŞKİN",
+  "8698819860285": {
+    "name": "KANAMA DURDURUCU ISLAK TAMPON 5X5CM",
     "unitCount": 1
   },
-  "0108699607750023": {
-    "name": "ATROPIN GALEN 0,5 MG 10 AMPUL",
+  "0108699522521456": {
+    "name": "VENTOLIN INHALER 100 MCG 200 DOZ",
     "unitCount": 1
   },
-  "8681227070049": {
-    "name": "NAZAL OKSİJEN KANÜLÜ YETİŞKİN",
+  "8697690394001": {
+    "name": "BATİDERM %10 POVİDON İYOT 1000ML",
     "unitCount": 1
   },
-  "httpş..wwwÇaromelkımyaÇcom.": {
-    "name": "AKTİF KARBON TOZ 100 GR",
+  "8680789040422": {
+    "name": "DERMOSEPT ALET YÜZEY DEZENFEKTANI KULLANIMA HAZIR 1000ML.",
     "unitCount": 1
   },
-  " )01= 8682851770015": {
-    "name": "OKSİJEN MASKESİ YETİŞKİN",
+  "8699664051392": {
+    "name": "YARA BANDI 10X30",
+    "unitCount": 26
+  },
+  "8699664093972": {
+    "name": "ENJEKSİYON BANDI 100'LÜ",
+    "unitCount": 100
+  },
+  "8699660650131": {
+    "name": "POVİİYODEKS ANTİSEPTİK ÇÖZELTİ 100 ML.",
     "unitCount": 1
   },
   "0108699788750041": {
     "name": "ADRENALIN 0,5 MG 10 AMPUL",
     "unitCount": 10
   },
-  "8699788698039": {
-    "name": "İzoleks - P %5 Dekstroz 500 ml.",
-    "unitCount": 1
-  },
   "0108699832090055": {
     "name": "ARVELES 25 MG 20 FILM TABLET",
     "unitCount": 10
   },
-  "0108699809127630": {
-    "name": "BUSCOPAN 10 MG 20 TB",
-    "unitCount": 20
+  "8681999091433": {
+    "name": "EKG ELEKTROT",
+    "unitCount": 1
+  },
+  "8681999090696": {
+    "name": "BİSTÜRİ UCU 15 100 ADET",
+    "unitCount": 100
+  },
+  "8690648725407": {
+    "name": "EKG ELEKTROT",
+    "unitCount": 1
+  },
+  "8717371740269": {
+    "name": "BANDAFİX ELASTİK GENİŞ MESH BANDAJ SİZE 6",
+    "unitCount": 1
   },
   "8699788694154": {
     "name": "%20 DEKSTROZ 500 ML.",
@@ -103,14 +91,6 @@
     "name": "HAZNELİ OKSİJEN MASKESİ YETİŞKİN",
     "unitCount": 1
   },
-  "8699606691174": {
-    "name": "İZOLEN DENGELİ 500 ML.",
-    "unitCount": 1
-  },
-  "0108680760092235": {
-    "name": "IBUCOLD C 200 MG/30 MG/300 MG FILM KAPLI TABLET (30 FILM KAPLI TABLET)",
-    "unitCount": 30
-  },
   "5019780012030": {
     "name": "Palintest SU WATER TEST REAGENTS",
     "unitCount": 100
@@ -119,89 +99,61 @@
     "name": "NORODOL 5 MG 5 AMPUL",
     "unitCount": 2
   },
-  "8698726548283": {
-    "name": "ENDOTRAKEAL TÜP KAFLI 8 MM.",
+  "8699788698022": {
+    "name": "%0.9 İZOTONİK SODYUM KLORÜR 500 ML.",
     "unitCount": 1
   },
   "43061HFDE8HFS2": {
     "name": "google tv",
     "unitCount": 1
   },
-  "8699788698022": {
-    "name": "%0.9 İZOTONİK SODYUM KLORÜR 500 ML.",
+  "8683249001018": {
+    "name": "YARA BANDI SANİTA",
     "unitCount": 1
   },
-  "8680525620017": {
-    "name": "ULTRASOUND GEJ JEL 1000 ML.",
+  "0108699525528148": {
+    "name": "SALRES 100 MCG INHALASYON ICIN OLCULU DOZLU AEROSOL 200 DOZ",
     "unitCount": 1
-  },
-  "8682851770015": {
-    "name": "OKSİJEN MASKESİ ÇOCUK",
-    "unitCount": 1
-  },
-  "8681227070056": {
-    "name": "NAZAL OKSİJEN KANÜLÜ ÇOCUK/PEDİATRİC",
-    "unitCount": 1
-  },
-  "0108699543750019": {
-    "name": "DRAMAMINE 50 MG 5 AMPUL",
-    "unitCount": 4
   },
   "0108699607750016": {
     "name": "ATROPIN GALEN 1 MG 10 AMPUL",
     "unitCount": 10
   },
-  "8699788698015": {
-    "name": "%5 DEKSTROZ 500 ML.",
+  "8681413821202": {
+    "name": "SOĞUTUCU SPREY CLORETHYL 150 ML.",
     "unitCount": 1
   },
-  "8699606690757": {
-    "name": "%5 DEKSTROZ 250 ML.",
+  "8680525620239": {
+    "name": "SAF SU (DEİYONİZE SU) 1000 G NON STERİL",
+    "unitCount": 1
+  },
+  "8699080202620": {
+    "name": "STERİL GAZ KOMPRES 7.5X7.5CM 20X5",
+    "unitCount": 20
+  },
+  "8033971550078": {
+    "name": "SURGİFİX M25 5",
     "unitCount": 1
   },
   "0108699548093159": {
     "name": "BRUFEN 600 MG 20 FILM TABLET",
     "unitCount": 20
   },
-  "8680434325263": {
-    "name": "İNFÜZYON SETİ",
-    "unitCount": 1
-  },
   "0108699506012055": {
     "name": "iiiiiiiiiiiiiiiiiiiiiiiiMETPAMID 10 MG 30 TABLET",
     "unitCount": 1
-  },
-  "0108699788750027": {
-    "name": "ADRENALIN 1 MG 10 AMPUL",
-    "unitCount": 10
   },
   "8699606691327": {
     "name": "LAKTATLI RİNGER 500 ML.",
     "unitCount": 1
   },
-  "0108683434443005": {
-    "name": "PETHOLAN 100 MG/2ML 5 AMP.",
-    "unitCount": 4
-  },
   "0108699844651725": {
     "name": "DIAKSI 5 MG /2.5 ML REKTAL COZELTI",
     "unitCount": 3
   },
-  "8698863830395": {
-    "name": "NAZAL OKSİJEN KANÜLÜ YETİŞKİN",
-    "unitCount": 1
-  },
-  "0108699543010045": {
-    "name": "DRAMAMINE 50 MG 12 TABLET",
-    "unitCount": 8
-  },
   "0108699788750218": {
     "name": "ATROPİN 1MG/1ML 10 AMP.",
     "unitCount": 10
-  },
-  "8699164550098": {
-    "name": "ENDOTRAKEAL TÜP KAFLI 6 MM.",
-    "unitCount": 1
   },
   "0108699708751530": {
     "name": "AKINETON 5 MG/ML ENJEKSIYON ICIN SOLUSYON ICEREN 1 ML X 5 AMPUL",
@@ -219,8 +171,240 @@
     "name": "İZOLEN DENGELİ 500 ML.",
     "unitCount": 1
   },
+  "9999999999999": {
+    "name": "ELASTİK BANDAJ 10X120CM",
+    "unitCount": 1
+  },
+  "8697690394025": {
+    "name": "DERMOSEPT ZEFİRAN ANTİNAKTERYEL ANTİFUNGAL ÇÖZELTİ 1000 ML.",
+    "unitCount": 1
+  },
+  "8699788697513": {
+    "name": "%0.9 İZOTONİK SODYUM KLORÜR 1000 ML.",
+    "unitCount": 1
+  },
+  "8699788694017": {
+    "name": "%5 DEKSTROZ 500 ML.",
+    "unitCount": 1
+  },
+  "8699164550111": {
+    "name": "ENDOTRAKEAL TÜP KAFLI 7 MM.",
+    "unitCount": 1
+  },
+  "010869959281022117270629102206021": {
+    "name": "FLASTER TIBBİ ESNEK 2.5CM X 5M",
+    "unitCount": 1
+  },
+  "0108699586750137": {
+    "name": "LARGACTIL 25 MG ENJEKSIYONLUK/INFUZYONLUK COZELTI ICEREN AMPUL (10 AMPUL)",
+    "unitCount": 2
+  },
+  "010869959281026917281124102311033": {
+    "name": "FLASTER TIBBİ ESNEK 10CM X 10M",
+    "unitCount": 1
+  },
+  "8699788991048": {
+    "name": "İNFÜZYON SETİ",
+    "unitCount": 1
+  },
+  "8698573031051": {
+    "name": "HAZNELİ OKSİJEN MASKESİ ÇOCUK",
+    "unitCount": 1
+  },
+  "0108699522521494": {
+    "name": "VENTOLIN NEBULES 2,5ML 20 DOZ",
+    "unitCount": 1
+  },
+  "8680789040217": {
+    "name": "DERMOSEPT EL DEZENFEKTANI 1000 ML.",
+    "unitCount": 1
+  },
+  "0108699532017802": {
+    "name": "XANAX 0,5 MG 30 TABLET",
+    "unitCount": 20
+  },
+  "8682076023613": {
+    "name": "OKSİJEN MASKESİ YETİŞKİN",
+    "unitCount": 1
+  },
+  "8033971550108": {
+    "name": "SURGİFİX M25 7",
+    "unitCount": 1
+  },
+  "0108699607750023": {
+    "name": "ATROPIN GALEN 0,5 MG 10 AMPUL",
+    "unitCount": 1
+  },
+  "9999999999998": {
+    "name": "PELVİK KEMER",
+    "unitCount": 1
+  },
+  "8681227070049": {
+    "name": "NAZAL OKSİJEN KANÜLÜ YETİŞKİN",
+    "unitCount": 1
+  },
+  "9999999999996": {
+    "name": "SAF SU (DEİYONİZE SU) 1000 G",
+    "unitCount": 1
+  },
+  "8683481000350": {
+    "name": "FLASTER 10CMX5MT",
+    "unitCount": 1
+  },
+  "httpş..wwwÇaromelkımyaÇcom.": {
+    "name": "AKTİF KARBON TOZ 100 GR",
+    "unitCount": 1
+  },
+  " )01= 8682851770015": {
+    "name": "OKSİJEN MASKESİ YETİŞKİN",
+    "unitCount": 1
+  },
+  "8699788698039": {
+    "name": "İzoleks - P %5 Dekstroz 500 ml.",
+    "unitCount": 1
+  },
+  "0108699809127630": {
+    "name": "BUSCOPAN 10 MG 20 TB",
+    "unitCount": 20
+  },
+  "9999999999997": {
+    "name": "POTASYUM PERMANGANAT 100 GR",
+    "unitCount": 1
+  },
+  "8682843716267": {
+    "name": "JEL TERMOJEL GEL PACKS 13X13CM SICAK VE SOĞUK KOMPRES JEL",
+    "unitCount": 1
+  },
+  "8699606691174": {
+    "name": "İZOLEN DENGELİ 500 ML.",
+    "unitCount": 1
+  },
+  "8699660650025": {
+    "name": "OKSİJENLİ SU 1000 ML",
+    "unitCount": 1
+  },
+  "0108680760092235": {
+    "name": "IBUCOLD C 200 MG/30 MG/300 MG FILM KAPLI TABLET (30 FILM KAPLI TABLET)",
+    "unitCount": 30
+  },
+  "010869959281026917290725102407018": {
+    "name": "FLASTER 10CMX10MT",
+    "unitCount": 1
+  },
+  "0108699345201009": {
+    "name": "CARBOMİX 50 G ORAL SÜSP İÇİN GRANÜL",
+    "unitCount": 1
+  },
+  "8698726548283": {
+    "name": "ENDOTRAKEAL TÜP KAFLI 8 MM.",
+    "unitCount": 1
+  },
+  "01080337379860041124010017290100103560": {
+    "name": "KANAMA DURDURUCU ISLAK TAMPON 7X5X1CM",
+    "unitCount": 1
+  },
+  "8680525620017": {
+    "name": "ULTRASOUND GEJ JEL 1000 ML.",
+    "unitCount": 1
+  },
+  "8682851770015": {
+    "name": "OKSİJEN MASKESİ ÇOCUK",
+    "unitCount": 1
+  },
+  "8681227070056": {
+    "name": "NAZAL OKSİJEN KANÜLÜ ÇOCUK/PEDİATRİC",
+    "unitCount": 1
+  },
+  "8699080222512": {
+    "name": "TURNİKE OTOMATİK DAMARYOLU İÇİN",
+    "unitCount": 1
+  },
+  "0108699543750019": {
+    "name": "DRAMAMINE 50 MG 5 AMPUL",
+    "unitCount": 4
+  },
+  "ÜC1011088452151593217200517108137X": {
+    "name": "EKG ELEKTROT",
+    "unitCount": 1
+  },
+  "8699788698015": {
+    "name": "%5 DEKSTROZ 500 ML.",
+    "unitCount": 1
+  },
+  "0108699844521158": {
+    "name": "CORTAIR 0,25 MG/ML NEBULIZASYON ICIN TEK DOZLUK INHALASYON SUSPANSIYONU ICEREN FLAKON (20 FLAKON)",
+    "unitCount": 20
+  },
+  "8699606690757": {
+    "name": "%5 DEKSTROZ 250 ML.",
+    "unitCount": 1
+  },
+  "8698915350185": {
+    "name": "JEL GEL PACKS 13X26CM SICAK VE SOĞUK KOMPRES JEL",
+    "unitCount": 1
+  },
+  "8680434325263": {
+    "name": "İNFÜZYON SETİ",
+    "unitCount": 1
+  },
+  "8684396961002": {
+    "name": "TAHTA DİL BASACAĞI ABESLANG 100'LÜ",
+    "unitCount": 100
+  },
+  "0108699788750027": {
+    "name": "ADRENALIN 1 MG 10 AMPUL",
+    "unitCount": 10
+  },
+  "0108683434443005": {
+    "name": "PETHOLAN 100 MG/2ML 5 AMP.",
+    "unitCount": 4
+  },
+  "8698863830395": {
+    "name": "NAZAL OKSİJEN KANÜLÜ YETİŞKİN",
+    "unitCount": 1
+  },
+  "8680525628976": {
+    "name": "ALKOLLÜ MENDİL 100LÜ",
+    "unitCount": 100
+  },
+  "0108699543010045": {
+    "name": "DRAMAMINE 50 MG 12 TABLET",
+    "unitCount": 8
+  },
+  "8681285101631": {
+    "name": "ENJEKSİYON BANDI 100'LÜ",
+    "unitCount": 100
+  },
+  "8699164550098": {
+    "name": "ENDOTRAKEAL TÜP KAFLI 6 MM.",
+    "unitCount": 1
+  },
+  "8682139419001": {
+    "name": "TAHTA DİL BASACAĞI ABESLANG 100'LÜ",
+    "unitCount": 100
+  },
+  "8690758011032": {
+    "name": "PAMUK ASTERİL 200G",
+    "unitCount": 1
+  },
+  "8680434326369": {
+    "name": "FLASTER TIBBİ ESNEK 5CM X 10M",
+    "unitCount": 1
+  },
   "0108680400770424": {
     "name": "SEDEVER 5MG/5ML 5 AMP.",
     "unitCount": 3
+  },
+  "4719003940041": {
+    "name": "KULAKTAN ÖLÇER DİJİTAL TERMOMETRE PROBU 40 ADET",
+    "unitCount": 40
+  },
+  "8682835817453": {
+    "name": "PAMUKLU PED STERİL 10CMX10CM TEKLİ PAKET",
+    "unitCount": 1
+  },
+  "8690021402574": {
+    "name": "ETİL ALKOL 70 DERECE 1000 ML.",
+    "unitCount": 1
   }
 }
